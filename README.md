@@ -1,6 +1,6 @@
 # terraform module `s3`
 
-terraform module to create a s3 bucket
+terraform module to create an s3 bucket for audio file storage
 
 ## Module Variables
 
