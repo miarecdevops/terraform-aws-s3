@@ -19,7 +19,6 @@ variable "s3_force_destroy" {
   description = "When true, data in bucket will be deleted so that the bucket can be destroyed without error. These objects are not recoverable."
 }
 
-
 variable "s3_acl" {
   description = "Determines if S3 bucket should be accessible from public internet"
   type        = string
