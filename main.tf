@@ -19,23 +19,3 @@ resource "aws_s3_bucket_acl" "bucket_acl" {
   acl    = var.s3_acl
 }
 
-# Apply Version Control to S3 bucket
-resource "aws_s3_bucket_versioning" "versioning" {
-  count = var.s3_versioning_enable == true ? 1 : 0
-  bucket = aws_s3_bucket.bucket.id
-  versioning_configuration {
-    status = "Enabled"
-  }
-}
-
-# Enable encryption on items in bucket
-resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
-  count = var.s3_server_side_encryption == true ? 1 : 0
-  bucket = aws_s3_bucket.bucket.id
-
-  rule {
-    apply_server_side_encryption_by_default {
-      sse_algorithm = var.s3_encryption_sse_algorithm
-    }
-  }
-}
