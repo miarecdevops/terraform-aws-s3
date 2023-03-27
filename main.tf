@@ -3,7 +3,7 @@
 // --------------------------------------------
 # Build S3 Bucket for Recording Storage
 resource "aws_s3_bucket" "bucket" {
-  bucket = "${var.bucket_name}"
+  bucket = "${var.s3_bucket_name}"
   force_destroy = var.s3_force_destroy
 
   tags = var.tags

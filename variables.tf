@@ -9,6 +9,12 @@ variable "tags" {
   type        = map(string)
 }
 
+variable "s3_bucket_name" {
+  description = "Name of S3 bucket, this has to be unique"
+  type        = string
+}
+
+s3_bucket_name
 
 variable "s3_force_destroy" {
   type        = bool
