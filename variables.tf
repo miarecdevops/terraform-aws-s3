@@ -14,8 +14,6 @@ variable "s3_bucket_name" {
   type        = string
 }
 
-s3_bucket_name
-
 variable "s3_force_destroy" {
   type        = bool
   description = "When true, data in bucket will be deleted so that the bucket can be destroyed without error. These objects are not recoverable."
