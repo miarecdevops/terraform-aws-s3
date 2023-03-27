@@ -28,7 +28,6 @@ module "bucket" {
 
   # tagging / naming variables
   environment           = "environment"
-  role                  = "storage"
 
   tags = {
     Role        = "storage"
