@@ -20,12 +20,6 @@ variable "s3_force_destroy" {
 }
 
 # ACL variables
-variable "s3_acl" {
-  description = "Determines if S3 bucket should be accessible from public internet"
-  type        = string
-  default     = "private"
-}
-
 variable "s3_block_public_acls" {
   type        = bool
   description = "Whether Amazon S3 should block public ACLs for this bucket"
