@@ -9,11 +9,6 @@ resource "aws_s3_bucket" "bucket" {
   tags = var.tags
 }
 
-resource "aws_s3_bucket_acl" "bucket_acl" {
-  bucket = aws_s3_bucket.bucket.id
-  acl    = var.s3_acl
-}
-
 # Block Public Access
 resource "aws_s3_bucket_public_access_block" "public_access" {
   bucket = aws_s3_bucket.bucket.id
