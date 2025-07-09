@@ -41,3 +41,4 @@ all ouputs are accessible module.module_name.output_name
 
 - `bucket`  bucket name
 - `region` region where bucket is deployed
+- `arn` ARN of s3 bucket
